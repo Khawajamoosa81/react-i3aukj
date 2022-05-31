@@ -5,10 +5,12 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Service from './Service';
+import Navbar from './NavBar';
 
 const App = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <Routes>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
@@ -16,7 +18,7 @@ const App = () => {
         <Route exact path="/contact" component={Contact} />
       </Routes>
       <Home />
-    </div>
+    </>
   );
 };
 
