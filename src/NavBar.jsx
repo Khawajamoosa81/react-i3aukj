@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -11,9 +12,9 @@ const Navbar = () => {
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <NavLink to="/" className="navbar-brand" href="#">
+            Khawaja Technical
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -28,26 +29,31 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <NavLink
+                  to="/"
+                  className="nav-link active"
+                  aria-current="page"
+                  exact
+                >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink exact to="/service" className="nav-link">
                   Services
-                </a>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink exact to="/about" className="nav-link">
                   About
-                </a>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink exact to="/contact" className="nav-link">
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
